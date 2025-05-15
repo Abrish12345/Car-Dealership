@@ -25,7 +25,7 @@ public class UserInterface {
     }
     public static void display (){
         Scanner scanner= new Scanner(System.in);
-        DealershipFileManager fileManager =new DealershipFileManager("C:\\Users\\Student\\Pluralsight\\Car-Dealership\\CarDealership\\vehicle.csv");
+        DealershipFileManager fileManager =new DealershipFileManager("vehicle.csv");
         Dealership dealership = fileManager.getDealership(); //load vehicles from file
         int choice=0;
 
