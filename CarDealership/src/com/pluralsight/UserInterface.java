@@ -1,5 +1,4 @@
 package com.pluralsight;
-
 import java.util.Scanner;
 
 public class UserInterface {
@@ -25,8 +24,8 @@ public class UserInterface {
     }
     public static void display (){
         Scanner scanner= new Scanner(System.in);
-        DealershipFileManager fileManager =new DealershipFileManager("vehicle.csv");
-        Dealership dealership = fileManager.getDealership(); //load vehicles from file
+        com.pluralsight.DealershipFileManager fileManager =new com.pluralsight.DealershipFileManager("C:\\Users\\Student\\Pluralsight\\Car-Dealership\\CarDealership\\vehicle.csv");
+        com.pluralsight.Dealership dealership = fileManager.getDealership(); //load vehicles from file
         int choice=0;
 
         while(choice != 99){

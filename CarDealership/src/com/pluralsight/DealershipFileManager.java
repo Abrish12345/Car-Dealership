@@ -1,15 +1,15 @@
 package com.pluralsight;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
 public class DealershipFileManager {
 
     private final String filepath;
 
     public DealershipFileManager(String filepath){
         this.filepath=filepath;
+        System.out.println("Looking for file: " + new File(filepath).getAbsolutePath());
     }
 
     public Dealership getDealership() {
@@ -33,7 +33,7 @@ public class DealershipFileManager {
             }
             return new Dealership(info[0], info[1], info[2], vehicles);
         } catch (IOException e) {
-            System.out.println("File writer error: " + filepath);
+            System.out.println("File read error: " + filepath);
             return null;
         }
     }
@@ -52,6 +52,7 @@ public class DealershipFileManager {
                         v.getColor() + "|" +
                         v.getMileage() + "|" +
                         v.getPrice());
+                writer.newLine(); //clear the line
             }
         } catch (IOException e) {
             System.out.println("File writer error: " + filepath);
